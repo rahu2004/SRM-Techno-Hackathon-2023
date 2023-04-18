@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Damage Analysis</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #9400d3;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+
+        .upload {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .upload input[type="file"] {
+            padding: 10px;
+            border: none;
+            background-color: #eee;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .upload input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #9400d3;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .upload input[type="submit"]:hover {
+            background-color: #6600cc;
+        }
+
+        .analyze-btn {
+            display: inline-block;
+            background-color: #9400d3;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .analyze-btn:hover {
+            background-color: #005FA3;
+        }
+
+        .preview-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+
+        .preview-box img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var fileInput = document.getElementById("file");
+            if (fileInput.files.length === 0) {
+                alert("Please select a file for upload.");
+                return false;
+            }
+            return true;
+        }
+
+        function showPreview() {
+            var fileInput = document.getElementById("file");
+            var previewBox = document.getElementById("preview-box");
+            var previewImg = document.createElement("img");
+            previewImg.className = "preview-img";
+            previewBox.innerHTML = "";
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImg.src = e.target.result;
+                    previewBox.style.display = "block";
+                    previewBox.appendChild(previewImg);
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+
+        function analyze() {
+            // Placeholder for actual analysis logic
+            alert("Analyzing...");
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+            <h1>Object Damage Analysis</h1>
+    </header>
+
+    <section class="upload">
+        <h2>Upload Image</h2>
+        <form onsubmit="return validateForm()">
+            <input type="file" id="file" name="file" accept="image/*" onchange="showPreview()" />
+            <input type="button" class="analyze-btn" value="Analyze" onclick="analyze()" />
+        </form>
+    </section>
+
+    <section class="preview-box" id="preview-box">
+        <h2>Image Preview</h2>
+        <img id="preview-img" />
+    </section>
+
+</body>
+</html>
