@@ -1,0 +1,36 @@
+base) C:\Users\dines>cd yolov5
+
+(base) C:\Users\dines\yolov5>conda activate yolov5
+
+(yolov5) C:\Users\dines\yolov5>python detect.py --weights C:\Users\dines\yolov5\runs\train\exp8\weights\last.pt --device cpu --source C:\Users\dines\OneDrive\Desktop\sample_6.jpg
+detect: weights=['C:\\Users\\dines\\yolov5\\runs\\train\\exp8\\weights\\last.pt'], source=C:\Users\dines\OneDrive\Desktop\sample_6.jpg, data=data\coco128.yaml, imgsz=[640, 640], conf_thres=0.25, iou_thres=0.45, max_det=1000, device=cpu, view_img=False, save_txt=False, save_conf=False, save_crop=False, nosave=False, classes=None, agnostic_nms=False, augment=False, visualize=False, update=False, project=runs\detect, name=exp, exist_ok=False, line_thickness=3, hide_labels=False, hide_conf=False, half=False, dnn=False, vid_stride=1
+requirements: C:\Users\dines\requirements.txt not found, check failed.
+YOLOv5  v7.0-145-g94714fe Python-3.11.2 torch-2.0.0+cpu CPU
+
+Fusing layers...
+Model summary: 157 layers, 7045186 parameters, 0 gradients, 15.9 GFLOPs
+image 1/1 C:\Users\dines\OneDrive\Desktop\Sample_6.jpg: 384x640 (no detections), 501.5ms
+Speed: 0.0ms pre-process, 501.5ms inference, 15.6ms NMS per image at shape (1, 3, 640, 640)
+Results saved to runs\detect\exp31
+
+(yolov5) C:\Users\dines\yolov5>python detect.py --weights C:\Users\dines\yolov5\runs\train\exp8\weights\last.pt --device cpu --source C:\Users\dines\OneDrive\Desktop\sample_4.jpg
+detect: weights=['C:\\Users\\dines\\yolov5\\runs\\train\\exp8\\weights\\last.pt'], source=C:\Users\dines\OneDrive\Desktop\sample_4.jpg, data=data\coco128.yaml, imgsz=[640, 640], conf_thres=0.25, iou_thres=0.45, max_det=1000, device=cpu, view_img=False, save_txt=False, save_conf=False, save_crop=False, nosave=False, classes=None, agnostic_nms=False, augment=False, visualize=False, update=False, project=runs\detect, name=exp, exist_ok=False, line_thickness=3, hide_labels=False, hide_conf=False, half=False, dnn=False, vid_stride=1
+requirements: C:\Users\dines\requirements.txt not found, check failed.
+YOLOv5  v7.0-145-g94714fe Python-3.11.2 torch-2.0.0+cpu CPU
+
+Fusing layers...
+Model summary: 157 layers, 7045186 parameters, 0 gradients, 15.9 GFLOPs
+image 1/1 C:\Users\dines\OneDrive\Desktop\sample_4.jpg: 384x640 1 Scratch, 1 front_bumper, 300.8ms
+Speed: 0.0ms pre-process, 300.8ms inference, 15.0ms NMS per image at shape (1, 3, 640, 640)
+Results saved to runs\detect\exp32
+
+(yolov5) C:\Users\dines\yolov5>python detect.py --weights C:\Users\dines\yolov5\runs\train\exp8\weights\last.pt --device cpu --source C:\Users\dines\OneDrive\Desktop\sample_14.jpg
+detect: weights=['C:\\Users\\dines\\yolov5\\runs\\train\\exp8\\weights\\last.pt'], source=C:\Users\dines\OneDrive\Desktop\sample_14.jpg, data=data\coco128.yaml, imgsz=[640, 640], conf_thres=0.25, iou_thres=0.45, max_det=1000, device=cpu, view_img=False, save_txt=False, save_conf=False, save_crop=False, nosave=False, classes=None, agnostic_nms=False, augment=False, visualize=False, update=False, project=runs\detect, name=exp, exist_ok=False, line_thickness=3, hide_labels=False, hide_conf=False, half=False, dnn=False, vid_stride=1
+requirements: C:\Users\dines\requirements.txt not found, check failed.
+YOLOv5  v7.0-145-g94714fe Python-3.11.2 torch-2.0.0+cpu CPU
+
+Fusing layers...
+Model summary: 157 layers, 7045186 parameters, 0 gradients, 15.9 GFLOPs
+image 1/1 C:\Users\dines\OneDrive\Desktop\Sample_14.jpg: 640x640 1 rear_bumper, 252.2ms
+Speed: 15.6ms pre-process, 252.2ms inference, 0.0ms NMS per image at shape (1, 3, 640, 640)
+Results saved to runs\detect\exp33
